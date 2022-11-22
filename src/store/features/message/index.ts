@@ -8,7 +8,7 @@ export interface MessageState {
 	showMessage: boolean;
 }
 
-const initialState: MessageState = {
+export const initialMessageState: MessageState = {
 	showMessage: false,
 	title: null,
 	status: null,
@@ -18,7 +18,7 @@ const initialState: MessageState = {
 
 export const messageSlice = createSlice({
 	name: 'message',
-	initialState,
+	initialState: initialMessageState,
 	reducers: {
 		setMessage: (state, action) => {
 			state.showMessage = action.payload.showMessage;

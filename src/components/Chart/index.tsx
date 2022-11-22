@@ -14,6 +14,7 @@ import { ISpecie } from 'src/store/features/api/types';
 interface IChartProps {
 	data?: ISpecie[];
 }
+
 const Chart: React.FC<IChartProps> = (props) => {
 	return (
 		<Box className='w-full h-[50vh]'>

@@ -1,24 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './pages/Error';
 import Home from './pages/Home';
 import Tree from './pages/Tree';
 import Species from './pages/Tree/components/Species';
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Home />,
-		// errorElement: TODO: Add error page
-		children: [],
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: '/trees/:treeId',
 		element: <Tree />,
-		children: [
-			{
-				path: '',
-				element: <Species />,
-			},
-		],
 	},
 	{
 		path: '/trees/:treeId/s',

@@ -9,7 +9,7 @@ export const TreeCard: React.FC<ITree> = (props) => {
 		<Link to={`trees/${id}`}>
 			<Box className='p-4 border border-gray-200 rounded-lg overflow-hidden my-4 hover:shadow-lg transition-shadow duration-500 ease-in-out'>
 				<h1>{name}</h1>
-				<p>{description}</p>
+				<p data-testid='description'>{description}</p>
 			</Box>
 		</Link>
 	);
